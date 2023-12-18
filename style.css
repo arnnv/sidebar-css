@@ -1,0 +1,125 @@
+* {
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url("pic.avif");
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 23%;
+  background-color: rgba(0, 213, 255, 0.1);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: -500px;
+}
+
+.logo-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  padding: 8px 8px 10px 16px;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+}
+
+.logo-head i {
+  font-size: 0.8em;
+  color: rgb(172, 172, 172);
+}
+
+.ctrl-btn-2 i:hover {
+  cursor: pointer;
+  color: aliceblue;
+  transform: scale(1.2);
+}
+
+.logo {
+  text-align: center;
+  flex: 1;
+}
+
+.options {
+  flex: 1;
+  font-size: 18px;
+}
+
+.options li {
+  display: block;
+  padding: 16px 32px;
+}
+
+li i {
+  margin-right: 8px;
+}
+
+.options li a,
+.options a i {
+  font-weight: bold;
+}
+
+.options li:hover {
+  box-shadow: 0 0 -7px rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+  transition: 0.21s ease-out;
+}
+
+.options li:hover a,
+.options li:hover i {
+  color: rgb(104, 223, 247);
+  transition: 0.21s ease-in-out;
+}
+
+.contact {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.contact i {
+  color: rgb(172, 172, 172);
+}
+
+.contact i:hover {
+  color: white;
+  transform: scale(1.2);
+  transition: ease 0.4s;
+}
+
+.ctrl-btn-1 {
+  font-size: 28px;
+  margin: 16px;
+}
+
+.ctrl-btn-1 i:hover {
+  color: gray;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#check:checked ~ .ctrl-btn-1 {
+  display: none;
+}
+
+#check:checked ~ .menu {
+  left: 0;
+  transition: all 0.3s linear;
+}
